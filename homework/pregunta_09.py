@@ -23,7 +23,7 @@ def pregunta_09():
     39  39  E   5  1998-01-26  1998
 
     """
-    df = pd.read_csv("C:/Repositorios/LAB-02-pandas-Ancarrenv/files/input/tbl0.tsv", sep="\t")
+    df = pd.read_csv(r"files\input\tbl0.tsv", sep="\t")
     df["year"] = df["c3"].str.split("-").str[0]
     return df
 

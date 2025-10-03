@@ -22,7 +22,7 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-    df = pd.read_csv("C:/Repositorios/LAB-02-pandas-Ancarrenv/files/input/tbl1.tsv", sep="\t")
+    df = pd.read_csv(r"files\input\tbl1.tsv", sep="\t")
     result = df.groupby('c0')['c4'].apply(lambda x: ",".join(sorted(x))).reset_index()
     return result
 

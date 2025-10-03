@@ -15,7 +15,7 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
-    df = pd.read_csv("C:/Repositorios/LAB-02-pandas-Ancarrenv/files/input/tbl1.tsv", sep="\t")
+    df = pd.read_csv(r"files\input\tbl1.tsv", sep="\t")
     return sorted(df['c4'].str.upper().unique()) 
 
 print(pregunta_06())

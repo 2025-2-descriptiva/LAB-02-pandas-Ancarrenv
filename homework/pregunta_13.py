@@ -20,8 +20,8 @@ def pregunta_13():
     E    275
     Name: c5b, dtype: int64
     """
-    df = pd.read_csv("C:/Repositorios/LAB-02-pandas-Ancarrenv/files/input/tbl0.tsv", sep="\t")
-    df1 = pd.read_csv("C:/Repositorios/LAB-02-pandas-Ancarrenv/files/input/tbl2.tsv", sep="\t")
+    df = pd.read_csv(r"files\input\tbl0.tsv", sep="\t")
+    df1 = pd.read_csv(r"files\input\tbl2.tsv", sep="\t")
 
     merged_df = pd.merge(df, df1, on='c0')
     return merged_df.groupby('c1')['c5b'].sum()
