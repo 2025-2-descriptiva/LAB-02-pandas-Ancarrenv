@@ -22,8 +22,7 @@ def pregunta_03():
 
     """
 
-    df = pd.read_csv(r"files\input\tbl0.tsv", sep="\t")
+    df = pd.read_csv("files/input/tbl0.tsv", sep="\t")
     return df['c1'].value_counts().sort_index()
 
 
-print(pregunta_03())

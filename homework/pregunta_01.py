@@ -14,8 +14,8 @@ def pregunta_01():
     40
     """
     
-    tbl0 = pd.read_csv(r"files\input\tbl0.tsv", sep="\t") 
+    tbl0 = pd.read_csv("files/input/tbl0.tsv", sep="\t") 
     
     return tbl0.shape[0]
 
-print(pregunta_01())
+
