@@ -24,6 +24,8 @@ def pregunta_12():
     """
     df = pd.read_csv("C:/Repositorios/LAB-02-pandas-Ancarrenv/files/input/tbl2.tsv", sep="\t")
     df['c5'] = df['c5a'] + ':' + df['c5b'].astype(str)
-    result = df.groupby('c0')['c5'].apply(lambda x: ','.join(x)).reset_index()
+    result = df.groupby('c0')['c5'].apply(lambda x: ','.join(sorted(x))).reset_index()
     return result  
+
+print(pregunta_12())
     

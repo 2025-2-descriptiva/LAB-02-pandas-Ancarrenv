@@ -21,7 +21,7 @@ def pregunta_10():
     E   1:1:2:3:3:4:5:5:5:6:7:8:8:9
     """
     df = pd.read_csv("C:/Repositorios/LAB-02-pandas-Ancarrenv/files/input/tbl0.tsv", sep="\t")
-    result = df.groupby('c1')['c2'].apply(lambda x: ':'.join(x)).reset_index()
+    result = df.groupby('c1')['c2'].apply(lambda x: ':'.join(sorted(x.astype(str)))).reset_index()
     return result.set_index('c1')
 
 print(pregunta_10())

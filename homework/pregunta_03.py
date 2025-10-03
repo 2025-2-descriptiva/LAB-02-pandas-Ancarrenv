@@ -23,6 +23,7 @@ def pregunta_03():
     """
 
     df = pd.read_csv("C:/Repositorios/LAB-02-pandas-Ancarrenv/files/input/tbl0.tsv", sep="\t")
-    return df['c1'].value_counts()
+    return df['c1'].value_counts().sort_index()
+
 
 print(pregunta_03())
